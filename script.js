@@ -1,52 +1,68 @@
 let coin = {
     state: 0,
     flip: function() {
-        let this.state = Math.random();
-        if (this.state >= 0.5) {
-            this.state = 1;
+        this.state = Math.random();
+            if (this.state >= 0.5) {
+            this.state = 1
         }
-        else {this.state = 0;
+            else {this.state = 0;
         }
         /* 1. Randomly set your coin object's "state" property to be either 
            0 or 1: use "this.state" to access the "state" property on this object.*/
-    },
-    toString: function() {
+    } }
+    toString: function Side() {
         /* 2. Return the string "Heads" or "Tails", depending on whether
            "this.state" is 0 or 1. */
            //if state is 0  //return tails
            //else state is 1 //return heads
-            if (this.state == 0) {
-                return "Tails"
+        if (this.state == 0) {
+            return 'Tails'
             }
-            else {
-                this.state == 1
-                return "Heads"
+        else {
+            this.state == 1;
+            return 'Heads'
     }
-    toHTML: function() {
+    toHTML: function images() {
         let image = document.createElement('img');
-        image.src = "./images/head.jpg"
-        
-        console.log(coin.toHTML())
-        let container = document.createElement('div');
+        if (this.state == 0){
+           image.src = "./images/tails.jpg"
+        }
+        else if (this.state == 1) {
+            image.src = "./images/head.jpg"  
+        }      
 
-        container.append(coin.toHTML ());
-        //if state is 0
-            //set image to tails
-           //else state is 1
-            //set image to heads
+  
         /* 3. Set the properties of this image element to show either face-up
            or face-down, depending on whether this.state is 0 or 1.*/
         return image;
     }
-},
-let container = document.createElement('div');
-container.append(coin.toHTML());
-document.body.append(coin.toHTML())
-function display20Flips() {
-/*uses a loop to flip the coin 20 times. toString */
 }
+display20flips();
 
-function display20Images() {
-/* use a loop to flip the coin 20 times.display the result of each flip as an ING
-toHTML*/
+function display20flips() {
+    function display20Flips() {
+        for (let index = 0; index < 20; index++) {
+          coin.flip();
+          let string = coin.toString();
+          document.body.append(string);
+        } 
+    }
+
 }
+display20images();
+
+function display20images() {
+    for (let index = 0; index < 20; index++) {
+        coin.flip()
+        let image = coin.toHTML();
+        document.body.append(image);
+
+    }
+}
+console.log (coin.toString());
+
+console.log (coin.toHTML());
+   
+    let container = document.createElement('div');
+    container.append(coin.toHTML());
+    document.body.append(container);

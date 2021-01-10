@@ -39,17 +39,14 @@ let coin = {
         return image;
     }
 }
-display20flips();
+
 
 function display20flips() {
-    function display20Flips() {
         for (let index = 0; index < 20; index++) {
           coin.flip();
           let string = coin.toString();
           document.body.append(string);
         } 
-    }
-
 }
 
 
@@ -61,10 +58,8 @@ function display20images() {
 
     }
 }
-console.log (coin.toString());
+console.log(display20flips());
 
-console.log (coin.toHTML());
-
-    let container = document.createElement('div');
-    container.append(coin.toHTML());
-    document.body.append(container);
+let container = document.createElement('div');
+container.append(display20images());
+document.body.append(container);

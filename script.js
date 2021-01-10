@@ -1,6 +1,6 @@
 let coin = {
     state: 0,
-    flip: function() {
+    flip: function Side() {
         this.state = Math.random();
             if (this.state >= 0.5) {
             this.state = 1
@@ -9,8 +9,8 @@ let coin = {
         }
         /* 1. Randomly set your coin object's "state" property to be either 
            0 or 1: use "this.state" to access the "state" property on this object.*/
-    } }
-    toString: function Side() {
+    }, 
+    toString: function ide() {
         /* 2. Return the string "Heads" or "Tails", depending on whether
            "this.state" is 0 or 1. */
            //if state is 0  //return tails
@@ -20,9 +20,11 @@ let coin = {
             }
         else {
             this.state == 1;
-            return 'Heads'
-    }
-    toHTML: function images() {
+            return 'Heads';
+            }
+    },
+
+    toHTML: function image() {
         let image = document.createElement('img');
         if (this.state == 0){
            image.src = "./images/tails.jpg"
@@ -49,7 +51,7 @@ function display20flips() {
     }
 
 }
-display20images();
+
 
 function display20images() {
     for (let index = 0; index < 20; index++) {
@@ -62,7 +64,7 @@ function display20images() {
 console.log (coin.toString());
 
 console.log (coin.toHTML());
-   
+
     let container = document.createElement('div');
     container.append(coin.toHTML());
     document.body.append(container);
